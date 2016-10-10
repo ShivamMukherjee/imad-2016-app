@@ -22,33 +22,36 @@ var article1 = {
             `
 }
 
-var htmlTemplate = `
-    <html>
-    <head>
-        <title>
-           ${title}
-        </title>
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link href="ui/style.css" rel="stylesheet" />
-    </head>
+function createTemplate(data) {
+ 
+    var htmlTemplate = `
+        <html>
+        <head>
+            <title>
+               ${data.title}
+            </title>
+            <meta name="viewport" content="width=device-width, initial-scale=1" />
+            <link href="ui/style.css" rel="stylesheet" />
+        </head>
+        
+        <body>
+            <nav class="container">
+                <a href="/">Home</a>
+            </nav>
+            <br/>
+            <article class="container">
+                <h3>
+                    ${data.heading}
+                </h3>
+               
+                ${data.content}
+            </article>
+        </body>
+    </html>
+    `;
     
-    <body>
-        <nav class="container">
-            <a href="/">Home</a>
-        </nav>
-        <br/>
-        <article class="container">
-            <h3>
-                ${heading}
-            </h3>
-           
-            ${content}
-        </article>
-    </body>
-</html>
-
-`;
-
+    return htmlTemplate;
+}
 
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
