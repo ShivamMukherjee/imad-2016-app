@@ -34,7 +34,7 @@ var articles = {
                 `
     },
     'article-3': {
-        title: 'Article 2 | sixty nine',
+        title: 'Article 3 | sixty nine',
         heading: 'Deprecated Header 3',
         content: `
                 <p>
