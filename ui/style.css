@@ -24,7 +24,7 @@ body {
     transform: rotate(69deg);
 }
 
-article {
+.container {
     max-width: 80%;
     margin: 0 auto;
     color: cyan;
