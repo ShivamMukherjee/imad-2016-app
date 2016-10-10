@@ -58,7 +58,6 @@ var articles = {
 }
 
 function createTemplate(data) {
- 
     var htmlTemplate = `
         <html>
         <head>
