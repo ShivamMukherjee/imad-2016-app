@@ -27,5 +27,6 @@ body {
 article {
     max-width: 80%;
     margin: 0 auto;
+    color: cyan;
     color: hsla(240, 75%, 75%, 1);
 }
