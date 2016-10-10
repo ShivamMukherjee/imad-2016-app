@@ -23,3 +23,9 @@ body {
 .img-69-deg {
     transform: rotate(69deg);
 }
+
+.container {
+    max-width: 80%;
+    margin: 0 auto;
+    color: hsla(360, 75, 25, 1);
+}
