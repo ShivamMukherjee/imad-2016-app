@@ -15,13 +15,13 @@ app.get('/article-1', function (req, res) {
 });
 
 app.get('/article-2', function (req, res) {
-//  res.sendFile(path.join(__dirname, 'ui', 'article-2.html'));
-	res.send("Article will be uploaded shortly. Lol.");
+  res.sendFile(path.join(__dirname, 'ui', 'article-2.html'));
+  //res.send("Article will be uploaded shortly. Lol.");
 });
 
 app.get('/article-3', function (req, res) {
-//  res.sendFile(path.join(__dirname, 'ui', 'article-3.html'));
-	res.send("Article will be uploaded shortly. Lol.");
+res.sendFile(path.join(__dirname, 'ui', 'article-3.html'));
+//res.send("Article will be uploaded shortly. Lol.");
 });
 
 app.get('/ui/style.css', function (req, res) {
