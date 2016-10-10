@@ -5,21 +5,56 @@ var path = require('path');
 var app = express();
 app.use(morgan('combined'));
 
-var article1 = {
-    title: 'Article 1 | sixty nine',
-    heading: 'Deprecated Header',
-    content: `
-            <p>
-                s(ix). s(ix). s(ix). s(ix). s(ix). s(ix). s(ix). s(ix). s(ix). s(ix). s(ix). s(ix). s(ix). s(ix). 
-                s(ix). s(ix). s(ix). s(ix). s(ix). s(ix). s(ix). s(ix). s(ix). s(ix). s(ix). s(ix). s(ix). s(ix). 
-                s(ix). s(ix). s(ix). s(ix). s(ix). s(ix). s(ix). s(ix). s(ix). s(ix). s(ix). s(ix). s(ix). s(ix). 
-            </p>
-            <p>
-                s(ix). s(ix). s(ix). s(ix). s(ix). s(ix). s(ix). s(ix). s(ix). s(ix). s(ix). s(ix). s(ix). s(ix). 
-                s(ix). s(ix). s(ix). s(ix). s(ix). s(ix). s(ix). s(ix). s(ix). s(ix). s(ix). s(ix). s(ix). s(ix). 
-                s(ix). s(ix). s(ix). s(ix). s(ix). s(ix). s(ix). s(ix). s(ix). s(ix). s(ix). s(ix). s(ix). s(ix). 
-            </p>
-            `
+var articles = {
+    article1: {
+        title: 'Article 1 | sixty nine',
+        heading: 'Deprecated Header 1',
+        content: `
+                <p>
+                    s(ix). s(ix). s(ix). s(ix). s(ix). s(ix). s(ix). s(ix). s(ix). s(ix). s(ix). s(ix). s(ix). s(ix). 
+                    s(ix). s(ix). s(ix). s(ix). s(ix). s(ix). s(ix). s(ix). s(ix). s(ix). s(ix). s(ix). s(ix). s(ix). 
+                    s(ix). s(ix). s(ix). s(ix). s(ix). s(ix). s(ix). s(ix). s(ix). s(ix). s(ix). s(ix). s(ix). s(ix). 
+                </p>
+                `
+    },
+    article2: {
+        title: 'Article 2 | sixty nine',
+        heading: 'Deprecated Header 2',
+        content: `
+                <p>
+                    s(ix). s(ix). s(ix). s(ix). s(ix). s(ix). s(ix). s(ix). s(ix). s(ix). s(ix). s(ix). s(ix). s(ix). 
+                    s(ix). s(ix). s(ix). s(ix). s(ix). s(ix). s(ix). s(ix). s(ix). s(ix). s(ix). s(ix). s(ix). s(ix). 
+                    s(ix). s(ix). s(ix). s(ix). s(ix). s(ix). s(ix). s(ix). s(ix). s(ix). s(ix). s(ix). s(ix). s(ix). 
+                </p>
+                <p>
+                    s(ix). s(ix). s(ix). s(ix). s(ix). s(ix). s(ix). s(ix). s(ix). s(ix). s(ix). s(ix). s(ix). s(ix). 
+                    s(ix). s(ix). s(ix). s(ix). s(ix). s(ix). s(ix). s(ix). s(ix). s(ix). s(ix). s(ix). s(ix). s(ix). 
+                    s(ix). s(ix). s(ix). s(ix). s(ix). s(ix). s(ix). s(ix). s(ix). s(ix). s(ix). s(ix). s(ix). s(ix). 
+                </p>
+                `
+    },
+    article3: {
+        title: 'Article 2 | sixty nine',
+        heading: 'Deprecated Header 3',
+        content: `
+                <p>
+                    s(ix). s(ix). s(ix). s(ix). s(ix). s(ix). s(ix). s(ix). s(ix). s(ix). s(ix). s(ix). s(ix). s(ix). 
+                    s(ix). s(ix). s(ix). s(ix). s(ix). s(ix). s(ix). s(ix). s(ix). s(ix). s(ix). s(ix). s(ix). s(ix). 
+                    s(ix). s(ix). s(ix). s(ix). s(ix). s(ix). s(ix). s(ix). s(ix). s(ix). s(ix). s(ix). s(ix). s(ix). 
+                </p>
+                <p>
+                    s(ix). s(ix). s(ix). s(ix). s(ix). s(ix). s(ix). s(ix). s(ix). s(ix). s(ix). s(ix). s(ix). s(ix). 
+                    s(ix). s(ix). s(ix). s(ix). s(ix). s(ix). s(ix). s(ix). s(ix). s(ix). s(ix). s(ix). s(ix). s(ix). 
+                    s(ix). s(ix). s(ix). s(ix). s(ix). s(ix). s(ix). s(ix). s(ix). s(ix). s(ix). s(ix). s(ix). s(ix). 
+                </p>
+                <p>
+                    s(ix). s(ix). s(ix). s(ix). s(ix). s(ix). s(ix). s(ix). s(ix). s(ix). s(ix). s(ix). s(ix). s(ix). 
+                    s(ix). s(ix). s(ix). s(ix). s(ix). s(ix). s(ix). s(ix). s(ix). s(ix). s(ix). s(ix). s(ix). s(ix). 
+                    s(ix). s(ix). s(ix). s(ix). s(ix). s(ix). s(ix). s(ix). s(ix). s(ix). s(ix). s(ix). s(ix). s(ix). 
+                </p>
+                `
+    }
+    
 }
 
 function createTemplate(data) {
