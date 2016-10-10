@@ -20,6 +20,6 @@ body {
     height: 200px;
 }
 
-img {
+.img-69-deg {
     transform: rotate(69deg);
 }
