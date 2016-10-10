@@ -27,5 +27,5 @@ body {
 article {
     max-width: 80%;
     margin: 0 auto;
-    color: hsla(240, 75, 25, 1);
+    color: hsla(240, 75%, 25%, 1);
 }
