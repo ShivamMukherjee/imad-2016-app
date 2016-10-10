@@ -1,7 +1,7 @@
 body {
     font-family: sans-serif;
     background: linear-gradient(69deg, lightgreen, lightgrey);
-    margin-top: 75px;
+    margin-top: 60px;
 }
 
 .center {
@@ -29,5 +29,5 @@ body {
     margin: 0 auto;
     color: cyan;
     color: hsla(240, 75%, 75%, 1);
-    padding: 60px 20px 0px;
+    padding: 0px 20px 0px;
 }
