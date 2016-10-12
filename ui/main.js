@@ -5,6 +5,6 @@ document.querySelector(".text-big").innerHTML = "Hi."
 
 // now it's Madi the dino
 var madi = document.querySelector(".img-medium");
-madi.onhover = function() {
+madi.onmouseover = function() {
     madi.style.marginLeft = "100px";
 };
